@@ -1,0 +1,12 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Time from '../components/Time.jsx'
+const res = await fetch("http://worldtimeapi.org/api/timezone/Asia/Nicosia") 
+    const time = await res.json()
+---
+
+<Layout title="Welcome to Astro.">
+	<main>
+		<Time time={time}/>
+	</main>
+</Layout>
